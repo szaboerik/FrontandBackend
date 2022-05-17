@@ -1,0 +1,37 @@
+
+.kerdes { grid-area: kerdes; }
+.v1 { grid-area: v1; }
+.v2 { grid-area: v2; }
+.v3 { grid-area: v3; }
+.v4 { grid-area: v4; }
+
+.oldal > div {
+    max-width: 100%;
+    display: grid;
+    grid-template-areas:
+      'kerdes kerdes kerdes kerdes kerdes kerdes'
+      'v1 v1 v1 v2 v2 v2'
+      'v3 v3 v3 v4 v4 v4'
+      'kerdes kerdes kerdes kerdes kerdes kerdes'
+      'v1 v1 v1 v2 v2 v2'
+      'v3 v3 v3 v4 v4 v4';
+    gap: 10px;
+    padding: 10px;
+    border-style:dotted;
+    border-color: gray;
+  }
+  .kerdes {
+      background:brown;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .oldal > div {
+        grid-template-areas:
+      'kerdes kerdes kerdes'
+      'v1 v1 v1'
+      'v2 v2 v2'
+      'v3 v3 v3'
+      'v4 v4 v4'
+      ;
+    }
+  }
